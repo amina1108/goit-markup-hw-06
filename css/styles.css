@@ -90,6 +90,7 @@ text-transform: uppercase;
 
 .header-contacts {
   display: none;
+  font-style: normal;
 }
 
 .burger-btn {
@@ -153,6 +154,8 @@ height: 56px;
     font-weight: 500;
     font-size: 16px;
     color: #2e2f42;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
   }
@@ -363,6 +366,9 @@ display: flex;
 }
 
 .contacts-link {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -506,7 +512,7 @@ margin-bottom: 72px;
   }
 }
 
-@media screen and (min-resolution: 192dpi) {
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
@@ -979,7 +985,7 @@ max-width: 264px;
 }
 
 
-.footer-subscribe-input {
+.footer-subscribe-input::placeholder {
   width:100%;
   height: 40px;
   max-width: 288px;
