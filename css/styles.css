@@ -88,7 +88,9 @@ text-transform: uppercase;
 
 
 
-
+.header-contacts {
+  display: none;
+}
 
 .burger-btn {
   background: none;
@@ -122,6 +124,10 @@ text-transform: uppercase;
   justify-content: space-between;
    width: 100%;
 height: 56px;
+}
+
+.header-contacts {
+  display: flex;
 }
 
   .header-logo {
@@ -217,14 +223,14 @@ height: 56px;
 
 
 
-.mobile-backdrop{
+.mobile-menu {
   position: fixed;
   visibility: hidden;
   pointer-events: none;
 
 }
 
-.mobile-backdrop.is-open {
+.mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -252,10 +258,16 @@ font-size: 36px;
 line-height: 1.1;
 letter-spacing: 0.02em;
 color: #2e2f42;
-padding: 24px 0;
+padding: 8px 0;
 display: block;
 
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .mobile-nav-link.current::after {
@@ -391,7 +403,9 @@ color: #434455;
 }
 
 .hero-title {
-  max-width: 320px;
+  max-width: 216px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -425,7 +439,13 @@ color: #434455;
   background-color: #404bbf;
 }
 
-
+@media  screen and (min-width: 320px) and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image:
+      linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
+      url("../images/hero-mob@2.jpg");
+  }
+}
 
 @media (min-width: 768px) {
   .hero-section {
@@ -445,11 +465,11 @@ color: #434455;
   }
 }
 
-@media screen (min-resolution: 192dpi) {
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-tab@2x.jpg");
+      url("../images/hero-tab@2.jpg");
   }
 }
 
@@ -475,11 +495,11 @@ color: #434455;
   }
 }
 
-@media screen (min-resolution: 192dpi) {
+@media screen and (min-resolution: 192dpi) {
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-desk@2x.jpg");
+      url("../images/hero-desk@2.jpg");
   }
 }
 
@@ -592,6 +612,7 @@ color: #434455;
 .people-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 72px;
 }
 
@@ -609,6 +630,10 @@ color: #434455;
   width: 100%;
 }
 
+.people-item {
+  max-width: 264px;
+  width: 100%;
+}
 .people-content {
   padding: 32px 16px;
   text-align: center;
@@ -960,9 +985,17 @@ max-width: 264px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+
 .footer-input {
-    width: 264px;
+    width: 100%;
   height: 40px;
+  max-width:  288px;
   padding-left: 16px;
 
   background-color: transparent;
