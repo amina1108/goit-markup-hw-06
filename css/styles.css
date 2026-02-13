@@ -59,8 +59,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 320px;
-height: 56px;
 }
 
 .header-nav {
@@ -91,6 +89,12 @@ text-transform: uppercase;
 .header-contacts {
   display: none;
   font-style: normal;
+  font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #434455;
 }
 
 .burger-btn {
@@ -123,8 +127,6 @@ text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: space-between;
-   width: 100%;
-height: 56px;
 }
 
 .header-contacts {
@@ -277,8 +279,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-nav-link.current::after {
-    content: "";
-
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -402,7 +402,7 @@ display: flex;
   background-color: #2e2f42;
   background-image:
     linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-    url("../images/hero-mob.jpg");
+    url("../images/Dark-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -460,7 +460,7 @@ margin-bottom: 72px;
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-mob@2x.jpg");
+      url("../images/Dark-mob.jpg");
   }
 }
 
@@ -471,7 +471,7 @@ margin-bottom: 72px;
     .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-tab.jpg");
+      url("../images/Dark-bg.jpg");
   }
 
   .hero-title {
@@ -486,7 +486,7 @@ margin-bottom: 72px;
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-tab@2x.jpg");
+      url("../images/Dark-tab.jpg");
   }
 }
 
@@ -500,7 +500,7 @@ margin-bottom: 72px;
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-desk.jpg");
+      url("../images/people-office.jpg");
   }
   
   .hero-title {
@@ -516,7 +516,7 @@ margin-bottom: 72px;
   .hero-section {
     background-image:
       linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-      url("../images/hero-desk@2x.jpg");
+      url("../images/people-office.jpg");
   }
 }
 
@@ -554,7 +554,7 @@ margin-bottom: 72px;
 
 .features-item p {
 font-family: "Roboto", sans-serif;
-font-weight: 500;
+font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
@@ -698,6 +698,7 @@ color: #434455;
 
 @media (min-width: 768px) {
   .people-list {
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
@@ -917,7 +918,6 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #f4f4fd;
-margin-bottom: 72px;
 text-align: left;
 max-width: 264px;
 }
@@ -985,10 +985,10 @@ max-width: 264px;
 }
 
 
-.footer-subscribe-input::placeholder {
+.footer-subscribe-input {
   width:100%;
   height: 40px;
-  max-width: 288px;
+  width: 288px;
 
   padding-left: 16px;
 
@@ -1028,6 +1028,14 @@ max-width: 264px;
   color: #ffffff;
 }
 
+.footer-subscribe-input::placeholder {
+  font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+color: #fff;
+}
 
 .footer-subscribe-button {
   min-width: 165px;
@@ -1118,7 +1126,7 @@ max-width: 264px;
 
 @media (min-width: 1158px) {
   .footer-container {
-   
+   max-width: 1158px;
     display: flex;
     align-items: baseline;
 justify-content: space-between;
@@ -1126,6 +1134,8 @@ justify-content: space-between;
     gap: 24px;
    
   }
+
+ 
 
   .footer-info {
     margin-right: 120px;
@@ -1171,7 +1181,7 @@ justify-content: space-between;
 max-width: 392px;
  width: 288px;
 height: 623px;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 16px;
   background-color:  #fcfcfc;
   border-radius: 4px;
  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -1326,6 +1336,7 @@ height: 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
               border 250ms cubic-bezier(0.4, 0, 0.2, 1),
               fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+              padding-left: 2px;
 }
 
 .checkbox:checked + .checkbox-label .checkbox-custom {
